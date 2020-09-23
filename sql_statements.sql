@@ -18,7 +18,7 @@ CREATE TABLE Persoon (
     username VARCHAR(255) NOT NULL,
     account_id INT NOT NULL,
     PRIMARY KEY(id),
-    FOREIGN KEY account_id REFERENCES account(id)
+    FOREIGN KEY (account_id) REFERENCES account(id)
 );
 --Insert Admin account
 INSERT INTO Account (email, password)
