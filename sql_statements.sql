@@ -27,4 +27,6 @@ VALUES ('admin@admin.com', 'admin');
 INSERT INTO Persoon (voornaam, tussenvoegsel, achternaam, username)
 VALUES ('rocco', 'van', 'baardwijk', 'admin');
 
-UPDATE Persoon SET account_id = (select id from account where email = "admin@admin.com")
+UPDATE Persoon 
+SET account_id = (select id from account where email = 'admin@admin.com')
+WHERE voornaam = 'rocco';
