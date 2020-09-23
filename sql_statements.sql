@@ -21,12 +21,10 @@ CREATE TABLE Persoon (
     FOREIGN KEY account_id REFERENCES account(id)
 );
 --Insert Admin account
-INSERT INTO TABLE Account (email, password)
+INSERT INTO Account (email, password)
 VALUES ('admin@admin.com', 'admin');
 
 INSERT INTO Persoon (voornaam, tussenvoegsel, achternaam, username)
 VALUES ('rocco', 'van', 'baardwijk', 'admin');
 
-INSERT INTO Persoon (account_id)
-SELECT id FROM Account
-WHERE id="admin@admin.com";
+UPDATE Persoon SET account_id = (select id from account where email = "admin@admin.com")
