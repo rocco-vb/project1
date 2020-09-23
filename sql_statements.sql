@@ -11,7 +11,7 @@ CREATE TABLE Account (
 );
 --Deze statement creates een table.
 CREATE TABLE Persoon (
-    id INT NOT NULL AUTO_INCREMENT NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
     voornaam VARCHAR(255) NOT NULL,
     tussenvoegsel VARCHAR(255),
     achternaam VARCHAR(255) NOT NULL,
