@@ -16,7 +16,7 @@ CREATE TABLE Persoon (
     tussenvoegsel VARCHAR(255),
     achternaam VARCHAR(255) NOT NULL,
     username VARCHAR(255) NOT NULL,
-    account_id INT NOT NULL,
+    account_id INT,
     PRIMARY KEY(id),
     FOREIGN KEY (account_id) REFERENCES account(id)
 );
