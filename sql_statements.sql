@@ -20,3 +20,13 @@ CREATE TABLE Persoon (
     PRIMARY KEY(id),
     FOREIGN KEY account_id REFERENCES account(id)
 );
+--Insert Admin account
+INSERT INTO TABLE Account (email, password)
+VALUES ('admin@admin.com', 'admin');
+
+INSERT INTO Persoon (voornaam, tussenvoegsel, achternaam, username)
+VALUES ('rocco', 'van', 'baardwijk', 'admin');
+
+INSERT INTO Persoon (account_id)
+SELECT id FROM Account
+WHERE id="admin@admin.com";
