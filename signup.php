@@ -9,7 +9,6 @@ $error = FALSE;
 foreach($fieldnames as $fieldname){
     if(!isset($_POST[$fieldname]) || empty($_POST[$fieldname])){
         $error = TRUE;
-        echo 'roccos wens';
         // header()
         //exit;
     }

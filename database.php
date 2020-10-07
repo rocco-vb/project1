@@ -62,14 +62,14 @@ class DB{
         }
     }
 
-    public function login(){
+    public function login($email){
         try {
             $gethash = "SELECT password FROM account WHERE email = :email";
             $statement2 = $this->db->prepare($gethash);
-
+            $email = $_POST["email"];
             $statement2->execute(
                 array(
-                    'email' => $_POST["email"]
+                    'email' => $email
                 )
             );
 
