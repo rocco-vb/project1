@@ -6,7 +6,7 @@ CREATE DATABASE project1;
 
 USE project1;
 
---Deze statement creates een table.
+-- Deze statement creates een table.
 
 CREATE TABLE Account (
     id INT NOT NULL AUTO_INCREMENT,
@@ -19,7 +19,7 @@ CREATE TABLE Account (
     FOREIGN KEY (usertype) REFERENCES Usertype(id),
     PRIMARY KEY(id)
 );
---Deze statement creates een table.
+-- Deze statement creates een table.
 
 CREATE TABLE Persoon (
     id INT NOT NULL AUTO_INCREMENT,
@@ -33,7 +33,7 @@ CREATE TABLE Persoon (
     FOREIGN KEY (account_id) REFERENCES account(id)
 );
 
---Deze statement creates een table
+-- Deze statement creates een table
 
 CREATE TABLE Usertype(
     id INT NOT NULL AUTO_INCREMENT,
@@ -43,10 +43,10 @@ CREATE TABLE Usertype(
     PRIMARY KEY(id)
 );
 
---Insert Admin account
+-- Insert Admin account
 
 INSERT INTO Account (email, password)
-VALUES ('admin@admin.com', 'admin');
+VALUES ('admin@admin.com', '$2y$10$yJa/VC2beT7FmyFiT.afDuHcCYmqARhsV2UJ/QCY89ZfgdQQZFM0q');
 
 INSERT INTO Persoon (voornaam, tussenvoegsel, achternaam, username)
 VALUES ('rocco', 'van', 'baardwijk', 'admin');
